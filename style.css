@@ -1,0 +1,268 @@
+/*Pengaturan dasar halaman */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7fbfc;
+    color: #263746;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Menu navigasi */
+header {
+    background-color: white;
+    border-bottom: 1px solid #e1ebef;
+}
+
+nav {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: #087eaa;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul a {
+    color: #263746;
+}
+
+nav ul a:hover {
+    color: #087eaa;
+}
+
+/* Bagian beranda */
+.beranda {
+    padding: 65px 5%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: linear-gradient(to right, #e6f7fc, #effaf4);
+}
+
+.teks-beranda,
+.gambar-beranda {
+    flex: 1;
+}
+
+.judul-kecil {
+    color: #16805d;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.teks-beranda h1 {
+    color: #075985;
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.teks-beranda p {
+    margin-bottom: 20px;
+}
+
+.gambar-beranda img {
+    display: block;
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.tombol {
+    display: inline-block;
+    background-color: #087eaa;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 7px;
+}
+
+.tombol:hover {
+    background-color: #075985;
+}
+
+/* Pengaturan bagian konten */
+.bagian {
+    padding: 65px 5%;
+}
+
+.judul-bagian {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 35px;
+}
+
+.judul-bagian h2 {
+    color: #075985;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* Kartu manfaat dan tips */
+.daftar-kartu {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.kartu {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #e1ebef;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: 0.3s;
+}
+
+.kartu:hover {
+    transform: translateY(-4px);
+}
+
+.kartu h3 {
+    color: #087eaa;
+    margin-bottom: 10px;
+}
+
+.kartu p {
+    color: #5d6f7b;
+}
+
+/* Bagian permasalahan */
+.masalah {
+    background-color: #edf7fa;
+}
+
+.daftar-masalah {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item-masalah {
+    background-color: white;
+    padding: 22px;
+    border-radius: 12px;
+}
+
+.item-masalah h3 {
+    color: #075985;
+    margin-bottom: 10px;
+}
+
+.item-masalah p {
+    color: #5d6f7b;
+}
+
+/* Bagian ajakan */
+.ajakan {
+    margin: 0 5% 60px;
+    padding: 45px 25px;
+    text-align: center;
+    background-color: #087eaa;
+    color: white;
+    border-radius: 15px;
+}
+
+.ajakan h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.ajakan p {
+    max-width: 650px;
+    margin: 0 auto 20px;
+}
+
+.tombol-putih {
+    background-color: white;
+    color: #075985;
+}
+
+.tombol-putih:hover {
+    background-color: #e6f7fc;
+}
+
+/* Footer */
+footer {
+    background-color: #063b59;
+    color: #e1edf2;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 14px;
+}
+
+/* Tampilan untuk tablet dan HP */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+    }
+
+    .beranda {
+        flex-direction: column;
+    }
+
+    .teks-beranda h1 {
+        font-size: 36px;
+    }
+
+    .gambar-beranda img {
+        height: 260px;
+    }
+
+    .daftar-kartu,
+    .daftar-masalah {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tampilan untuk HP kecil */
+@media (max-width: 520px) {
+    .daftar-kartu,
+    .daftar-masalah {
+        grid-template-columns: 1fr;
+    }
+
+    .bagian {
+        padding: 45px 5%;
+    }
+
+    .teks-beranda h1 {
+        font-size: 32px;
+    }
+
+    .ajakan h2 {
+        font-size: 27px;
+    }
+}
